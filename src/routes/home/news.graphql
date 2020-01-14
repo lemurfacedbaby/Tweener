@@ -1,9 +1,10 @@
-query HomeNews {
-  reactjsGetAllNews {
-    title
-    link
-    author
-    pubDate
-    content
+query GetAllCompanies {
+  databaseGetAllCompanies {
+    id
+    name
+    size
+    investors
+    ceo
+    contact
   }
 }

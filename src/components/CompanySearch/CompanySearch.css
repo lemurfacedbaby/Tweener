@@ -1,0 +1,6 @@
+@import '../variables.css';
+
+.root {
+  float: center;
+  margin: 3px 0 0;
+}

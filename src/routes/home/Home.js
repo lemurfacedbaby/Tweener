@@ -29,23 +29,25 @@ class Home extends React.Component {
   };
 
   render() {
-    const { data: { loading, reactjsGetAllNews } } = this.props;
+    const { data: { loading, databaseGetAllCompanies } } = this.props;
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <h1>React.js News</h1>
+          <br />
           {loading
             ? 'Loading...'
-            : reactjsGetAllNews.map(item => (
-                <article key={item.link} className={s.newsItem}>
-                  <h1 className={s.newsTitle}>
-                    <a href={item.link}>{item.title}</a>
-                  </h1>
-                  <div
-                    className={s.newsDesc}
-                    // eslint-disable-next-line react/no-danger
-                    dangerouslySetInnerHTML={{ __html: item.content }}
-                  />
+            : databaseGetAllCompanies.map(item => (
+                <article key="" className={s.newsItem}>
+                  <h1 className={s.newsTitle}>{item.name}</h1>
+                  <div className={s.newsDesc}>
+                    Size: {item.size}
+                    <br />
+                    Investors: {item.investors}
+                    <br />
+                    CEO: {item.ceo}
+                    <br />
+                    Contact: {item.contact}
+                  </div>
                 </article>
               ))}
         </div>

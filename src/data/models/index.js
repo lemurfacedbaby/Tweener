@@ -8,6 +8,7 @@
  */
 
 import sequelize from '../sequelize';
+import Company from './Company';
 import User from './User';
 import UserLogin from './UserLogin';
 import UserClaim from './UserClaim';
@@ -39,4 +40,4 @@ function sync(...args) {
 }
 
 export default { sync };
-export { User, UserLogin, UserClaim, UserProfile };
+export { Company, User, UserLogin, UserClaim, UserProfile };

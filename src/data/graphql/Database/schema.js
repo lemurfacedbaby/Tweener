@@ -10,7 +10,18 @@ import {
   queries as GetLoggedInUserQueries,
   resolvers as GetLoggedInUserResolver,
 } from './users/GetLoggedInUser';
-
+import {
+  schema as GetAllCompanies,
+  queries as GetAllCompaniesQueries,
+  resolvers as GetAllCompaniesResolver,
+} from './companies/GetAllCompanies';
+/**
+import {
+  schema as DropTableInput,
+  mutation as DropTable,
+  resolvers as DropTableResolvers,
+} from './companies/DropTable';
+*/
 /** * Mutations ** */
 import {
   schema as CreateUserInput,
@@ -18,14 +29,25 @@ import {
   resolvers as CreateUserResolver,
 } from './users/CreateUser';
 
-export const schema = [...GetAllUsers, ...CreateUserInput];
+import {
+  mutation as CreateCompany,
+  resolvers as CreateCompanyResolver,
+} from './companies/CreateCompany';
 
-export const queries = [...GetAllUsersQueries, ...GetLoggedInUserQueries];
+export const schema = [...GetAllUsers, ...CreateUserInput, ...GetAllCompanies];
 
-export const mutations = [...CreateUser];
+export const queries = [
+  ...GetAllUsersQueries,
+  ...GetLoggedInUserQueries,
+  ...GetAllCompaniesQueries,
+];
+
+export const mutations = [...CreateUser, ...CreateCompany];
 
 export const resolvers = merge(
+  GetAllCompaniesResolver,
   GetAllUsersResolver,
   GetLoggedInUserResolver,
   CreateUserResolver,
+  CreateCompanyResolver,
 );

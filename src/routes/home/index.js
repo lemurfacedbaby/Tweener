@@ -9,6 +9,7 @@
 
 import React from 'react';
 import Home from './Home';
+// Import the special news query
 import newsQuery from './news.graphql';
 import Layout from '../../components/Layout';
 
@@ -21,7 +22,7 @@ async function action({ client }) {
     chunks: ['home'],
     component: (
       <Layout>
-        <Home news={data.reactjsGetAllNews} />
+        <Home news={data.databaseGetAllCompanies} />
       </Layout>
     ),
   };
