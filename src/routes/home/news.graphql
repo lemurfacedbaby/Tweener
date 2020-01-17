@@ -1,10 +1,7 @@
 query GetAllCompanies {
   databaseGetAllCompanies {
-    id
     name
-    size
-    investors
-    ceo
-    contact
+    website
+    id
   }
 }

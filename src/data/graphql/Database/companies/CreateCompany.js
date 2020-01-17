@@ -7,11 +7,24 @@ export const mutation = [
 
     name: String!
 
-    size: String!
+    size: String
 
-    investors: String!
+    investors: String
 
-    ceo: String!
+    ceo: String
+    name: String
+    size: String
+    investors: String
+    ceoName: String
+    ceoEmail: String
+    website: String
+    linkedin: String
+    industry: String
+    pitch: String
+    revenue: String
+    minorityLed: Boolean
+    minorityFounded: Boolean
+    region: String
 
   ): DatabaseCompany
 `,
@@ -35,8 +48,16 @@ export const resolvers = {
         name: args.name,
         size: args.size,
         investors: args.investors,
-        ceo: args.ceo,
-        contact: args.contact,
+        ceoName: args.ceoName,
+        linkedin: args.linkedin,
+        ceoEmail: args.ceoEmail,
+        website: args.website,
+        industry: args.industry,
+        pitch: args.pitch,
+        revenue: args.revenue,
+        minorityLed: args.minorityLed,
+        minorityFounded: args.minorityFounded,
+        region: args.region,
       });
 
       return user;

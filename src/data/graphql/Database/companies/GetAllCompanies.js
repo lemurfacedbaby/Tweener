@@ -8,9 +8,16 @@ export const schema = [
     name: String
     size: String
     investors: String
-    ceo: String
-    updatedAt: String
-    createdAt: String
+    ceoName: String
+    ceoEmail: String
+    website: String
+    linkedin: String
+    industry: String
+    pitch: String
+    revenue: String
+    minorityLed: Boolean
+    minorityFounded: Boolean
+    region: String
   }
 `,
 ];

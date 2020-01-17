@@ -39,15 +39,7 @@ class Home extends React.Component {
             : databaseGetAllCompanies.map(item => (
                 <article key="" className={s.newsItem}>
                   <h1 className={s.newsTitle}>{item.name}</h1>
-                  <div className={s.newsDesc}>
-                    Size: {item.size}
-                    <br />
-                    Investors: {item.investors}
-                    <br />
-                    CEO: {item.ceo}
-                    <br />
-                    Contact: {item.contact}
-                  </div>
+                  <div className={s.newsDesc}>Size: {item.size}</div>
                 </article>
               ))}
         </div>

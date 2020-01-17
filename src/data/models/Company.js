@@ -13,6 +13,38 @@ const Company = Model.define(
       type: DataType.STRING(255),
       defaultValue: false,
     },
+    website: {
+      type: DataType.STRING(255),
+      defaultValue: false,
+    },
+    linkedin: {
+      type: DataType.STRING(255),
+      defaultValue: false,
+    },
+    pitch: {
+      type: DataType.STRING(255),
+      defaultValue: false,
+    },
+    industry: {
+      type: DataType.STRING(255),
+      defaultValue: false,
+    },
+    revenue: {
+      type: DataType.STRING(255),
+      defaultValue: false,
+    },
+    minorityLed: {
+      type: DataType.BOOLEAN(),
+      defaultValue: false,
+    },
+    minorityFounded: {
+      type: DataType.BOOLEAN(),
+      defaultValue: false,
+    },
+    region: {
+      type: DataType.STRING(255),
+      defaultValue: false,
+    },
     size: {
       type: DataType.STRING(255),
       defaultValue: false,
@@ -21,7 +53,11 @@ const Company = Model.define(
       type: DataType.STRING(255),
       defaultValue: false,
     },
-    ceo: {
+    ceoName: {
+      type: DataType.STRING(255),
+      defaultValue: false,
+    },
+    ceoEmail: {
       type: DataType.STRING(255),
       defaultValue: false,
     },
